@@ -1,5 +1,4 @@
 import httpx
-import json
 
 class ClashOfClansAPI:
     def __init__(self):
