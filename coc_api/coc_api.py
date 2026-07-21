@@ -10,7 +10,7 @@ class ClashOfClansAPI:
             headers={"Authorization": f"Bearer {token}"} 
         )
         
-    async def get_clan_war_log(self, tag: str):
+    async def get_current_war(self, tag: str):
         assert self.client is not None
         r = await self.client.get(f"clans/{tag}/currentwar")
         assert r.status_code==200, print(r)

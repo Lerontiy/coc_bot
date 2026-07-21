@@ -12,7 +12,7 @@ def get_creds():
     ])
     return scoped
 
-async def add_new_info(player_name:str, clan_name:str):
+async def add_star(player_name:str, clan_name:str):
     agcm = gspread_asyncio.AsyncioGspreadClientManager(get_creds)
     
     agc = await agcm.authorize()
@@ -53,4 +53,3 @@ async def add_new_info(player_name:str, clan_name:str):
     await worksheet.sort([(2, 'des')])
     # print(f"{clan_cell}{player_cell}")
     
-asyncio.run(add_new_info("123", "123"))
